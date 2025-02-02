@@ -1,0 +1,76 @@
+=== Caso de Teste 1: Criar um concerto com dados válidos ===
+Entrada:
+Nome do artista: Coldplay  
+Local do concerto: Estádio Nacional  
+Data do concerto (formato dd/mm/aaaa): 15/06/2025  
+Hora do concerto (HH:MM): 20:30  
+Capacidade do estabelecimento: 50000  
+Preço do bilhete (€): 75.50  
+Bar disponível (s/n): s  
+
+Saída esperada:
+Concerto 'Coldplay' criado com sucesso!
+
+------------------------------------------------------------
+
+=== Caso de Teste 2: Criar um concerto com data inválida ===
+Entrada:
+Nome do artista: U2  
+Local do concerto: Arena Lisboa  
+Data do concerto (formato dd/mm/aaaa): 15/06/2024  
+Hora do concerto (HH:MM): 21:00  
+Capacidade do estabelecimento: 20000  
+Preço do bilhete (€): 60.00  
+Bar disponível (s/n): n  
+
+Saída esperada:
+A data do concerto não pode ser antes de 01/01/2025!
+(O sistema pede para inserir a data novamente)
+
+------------------------------------------------------------
+
+=== Caso de Teste 3: Listar concertos sem nenhum criado ===
+Entrada:
+(O usuário escolhe a opção "Listar Concertos" no menu)
+
+Saída esperada:
+Nenhum concerto disponível.
+
+------------------------------------------------------------
+
+=== Caso de Teste 4: Reservar um lugar com quantidade válida ===
+Entrada:
+(O usuário escolhe a opção "Reservar Lugar" no menu)  
+Insira o ID do concerto para reservar: 123e4567-e89b-12d3-a456-426614174000  
+Quantos lugares deseja reservar? 2  
+
+Saída esperada:
+Reserva efetuada com sucesso! Código da reserva: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+------------------------------------------------------------
+
+=== Caso de Teste 5: Reservar um número maior que a capacidade ===
+Entrada:
+Insira o ID do concerto para reservar: 123e4567-e89b-12d3-a456-426614174000  
+Quantos lugares deseja reservar? 60000  
+
+Saída esperada:
+Lugares insuficientes disponíveis!
+
+------------------------------------------------------------
+
+=== Caso de Teste 6: Listar reservas sem nenhuma feita ===
+Entrada:
+(O usuário escolhe a opção "Listar Reservas" no menu)
+
+Saída esperada:
+Nenhuma reserva encontrada.
+
+------------------------------------------------------------
+
+=== Caso de Teste 7: Inserção de opções inválidas no menu ===
+Entrada:
+Usuário digita: 8
+
+Saída esperada:
+Opção inválida. Tente novamente.
